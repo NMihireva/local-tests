@@ -1,4 +1,9 @@
 describe('Authentication', () => {
+    beforeEach(  ()=>{
+            cy.visit('/user/login')
+        }
+    )
+
 // Pre-condions:
 // Open Sign in page
 //
@@ -10,7 +15,6 @@ describe('Authentication', () => {
 //     1.User icon is visible
 //     2. Current URL contains “/prifile/”
     it('Sign in with valid credentials', () => {
-        cy.visit('/user/login')
 
         cy.get('#normal_login_email')
             .type('n.mikhireva@gmail.com')
@@ -34,7 +38,6 @@ describe('Authentication', () => {
 // Expected results:
 //     Auth faild toast is visible
     it('Sign in with invalid credentials', () => {
-        cy.visit('/user/login')
 
         cy.get('#normal_login_email')
             .type('n.mikhireva@gmail.com')
@@ -60,7 +63,6 @@ describe('Authentication', () => {
 // 4.	Clear passwordl
 //     ER: “Required” validation message displayed
     it('Credentials validation', () => {
-        cy.visit('/user/login')
 
         cy.get('#normal_login_email')
             .type('test')
