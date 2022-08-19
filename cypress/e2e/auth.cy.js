@@ -17,9 +17,9 @@ describe('Authentication', () => {
     it('Sign in with valid credentials', () => {
 
         cy.get('#normal_login_email')
-            .type('n.mikhireva@gmail.com')
+            .type(Cypress.env('EMAIL'))
         cy.get('#normal_login_password')
-            .type('Nata0616')
+            .type(Cypress.env('PASSWORD'))
         cy.get('.login-form-button')
             .click()
         cy.get('.ant-avatar-square')

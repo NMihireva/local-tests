@@ -5,6 +5,9 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl: 'https://localcoding.us'
+    baseUrl: 'https://localcoding.us',
+    excludeSpecPattern: [
+      'cypress/e2e/1-getting-started/*.js',
+      'cypress/e2e/2-advanced-example/*.js'],
   },
 });
