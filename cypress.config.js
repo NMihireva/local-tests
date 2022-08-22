@@ -10,6 +10,6 @@ module.exports = defineConfig({
       'cypress/e2e/1-getting-started/*.js',
       'cypress/e2e/2-advanced-example/*.js'],
     viewportHeight: 720,
-    viewportWidth: 1300,
+    viewportWidth: 1400,
   },
 });
