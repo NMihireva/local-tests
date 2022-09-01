@@ -1,7 +1,7 @@
 before(()=>{
     cy.request(
         'POST',
-        `${Cypress.env("API_BASE-URL")}/user/login`,
+        `${Cypress.env("API_BASE_URL")}/user/login`,
         {email: Cypress.env('EMAIL'), password: Cypress.env('PASSWORD')}
     ).then((response)=>{
             Cypress.env('TOKEN', response.body.payload.token)
